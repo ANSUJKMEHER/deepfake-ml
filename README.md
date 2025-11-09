@@ -27,30 +27,30 @@ The model achieves **~97% accuracy** and **0.9949 ROC-AUC**, demonstrating stron
 deepfake-ml/
 │
 ├── models/
-│   ├── deepfake_predictor.h5             # Trained model weights
-│   ├── evaluation_summary.txt            # Metrics summary
-│   ├── training_curve.png
-│   ├── loss_curve.png
-│   ├── roc_curve.png
-│   └── confusion_matrix.png
+│ ├── deepfake_predictor.h5 # Trained model weights
+│ ├── evaluation_summary.txt # Metrics summary
+│ ├── training_curve.png
+│ ├── loss_curve.png
+│ ├── roc_curve.png
+│ └── confusion_matrix.png
 │
 ├── outputs/
-│   └── ansujkmeher_prediction.json       # Final test predictions
+│ └── ansujkmeher_prediction.json # Final test predictions
 │
 ├── src/
-│   ├── model.py                          # Classifier architecture
-│   ├── feature_extraction.py             # EfficientNetB4 extractor
-│   ├── preprocess.py                     # Image preprocessing
-│   ├── train.py                          # Training pipeline
-│   ├── predict.py                        # Inference script
-│   ├── eval_on_data.py                   # Evaluation script
-│   ├── evaluate.py                       # Alternate evaluation script
-│   ├── prepare_train_json.py             # Combine fake/real JSON to train.json
-│   └── check_*                           # Sanity check scripts
+│ ├── model.py # Classifier architecture
+│ ├── feature_extraction.py # EfficientNetB4 extractor
+│ ├── preprocess.py # Image preprocessing
+│ ├── train.py # Training pipeline
+│ ├── predict.py # Inference script
+│ ├── eval_on_data.py # Evaluation script
+│ ├── evaluate.py # Alternate evaluation script
+│ ├── prepare_train_json.py # Combine fake/real JSON to train.json
+│ └── check_* # Sanity check scripts
 │
-├── requirements.txt                      # Python dependencies
-├── app.ipynb                             # Optional notebook for analysis
-└── README.md                             # Project documentation
+├── requirements.txt # Python dependencies
+├── app.ipynb # Optional notebook for analysis
+└── README.md # Project documentation
 
 ````
 
