@@ -1,9 +1,3 @@
-Perfect — let’s replace that minimal README with a **clean, complete, and accurate version** for your actual submission and GitHub repo.
-
-Here’s a **refined README** (compact and professional — ideal for your current folder + final model setup).
-You can **copy–paste it directly over your current `README.md` file**:
-
----
 
 ```markdown
 # 🧠 Deepfake Detection Model – Synergy’25 Hackathon
@@ -27,30 +21,36 @@ The model achieves **~97% accuracy** and **0.9949 ROC-AUC**, demonstrating stron
 ---
 
 ## 📁 Folder Structure
+
 ```
 
 deepfake-ml/
+│
 ├── models/
-│   ├── deepfake_predictor.h5           # Trained model weights
-│   ├── evaluation_summary.txt          # Metrics summary
-│   ├── training_curve.png, loss_curve.png, roc_curve.png, confusion_matrix.png
+│   ├── deepfake_predictor.h5             # Trained model weights
+│   ├── evaluation_summary.txt            # Metrics summary
+│   ├── training_curve.png
+│   ├── loss_curve.png
+│   ├── roc_curve.png
+│   └── confusion_matrix.png
 │
 ├── outputs/
-│   └── ansujkmeher_prediction.json     # Final test predictions
+│   └── ansujkmeher_prediction.json       # Final test predictions
 │
 ├── src/
-│   ├── model.py                        # Classifier architecture
-│   ├── feature_extraction.py           # EfficientNetB4 extractor
-│   ├── preprocess.py                   # Image preprocessing
-│   ├── train.py                        # Training pipeline
-│   ├── predict.py                      # Inference script
-│   ├── eval_on_data.py / evaluate.py   # Evaluation scripts
-│   ├── prepare_train_json.py           # Combine fake/real JSON to train.json
-│   └── check_*                         # Sanity check scripts
+│   ├── model.py                          # Classifier architecture
+│   ├── feature_extraction.py             # EfficientNetB4 extractor
+│   ├── preprocess.py                     # Image preprocessing
+│   ├── train.py                          # Training pipeline
+│   ├── predict.py                        # Inference script
+│   ├── eval_on_data.py                   # Evaluation script
+│   ├── evaluate.py                       # Alternate evaluation script
+│   ├── prepare_train_json.py             # Combine fake/real JSON to train.json
+│   └── check_*                           # Sanity check scripts
 │
-├── requirements.txt                    # Python dependencies
-├── app.ipynb                           # Optional notebook for analysis
-└── README.md                           # Project documentation
+├── requirements.txt                      # Python dependencies
+├── app.ipynb                             # Optional notebook for analysis
+└── README.md                             # Project documentation
 
 ````
 
@@ -77,16 +77,21 @@ Ensure this structure:
 
 ```
 data/
- ├── train_images/
- │   ├── fake_cifake_images/
- │   └── real_cifake_images/
- ├── fake_cifake_preds.json
- ├── real_cifake_preds.json
- └── test/
-      ├── 1.png, 2.png, 3.png, ...
+│
+├── train_images/
+│   ├── fake_cifake_images/
+│   └── real_cifake_images/
+│
+├── fake_cifake_preds.json
+├── real_cifake_preds.json
+└── test/
+    ├── 1.png
+    ├── 2.png
+    ├── 3.png
+    └── ...
 ```
 
-Then generate the combined train metadata:
+Then generate the combined training metadata:
 
 ```bash
 python src/prepare_train_json.py
@@ -105,7 +110,7 @@ This will:
 * Load and augment data
 * Extract features via EfficientNetB4
 * Train the dense classifier
-* Save the best weights as `models/deepfake_predictor.h5`
+* Save best weights as `models/deepfake_predictor.h5`
 
 ---
 
@@ -118,7 +123,7 @@ python src/eval_on_data.py
 Generates:
 
 * Accuracy, ROC-AUC, and confusion matrix
-* Plots in `/models` and text summary in `evaluation_summary.txt`
+* Plots in `/models` and summary in `evaluation_summary.txt`
 
 ---
 
@@ -144,7 +149,7 @@ Example JSON:
 }
 ```
 
-Where **values near 1 → REAL** and **near 0 → FAKE**.
+👉 **Values near 1 → REAL**, **near 0 → FAKE**.
 
 ---
 
@@ -191,12 +196,7 @@ Developed using TensorFlow, Keras & Python
 
 ## 🏁 License
 
-MIT License – for educational and research use.
-
-````
+**MIT License** – for educational and research use.
 
 ---
 
-
-
-Would you like me to generate a **short “repo description”** (1-line + tags) that you can paste into your GitHub repository description field (for the top banner)?
