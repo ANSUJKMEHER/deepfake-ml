@@ -1,0 +1,13 @@
+Deepfake Detection Model Evaluation
+========================================
+
+              precision    recall  f1-score   support
+
+        Fake       0.97      0.97      0.97      1000
+        Real       0.97      0.97      0.97      1000
+
+    accuracy                           0.97      2000
+   macro avg       0.97      0.97      0.97      2000
+weighted avg       0.97      0.97      0.97      2000
+
+AUC Score: 0.9939

@@ -1,0 +1,7 @@
+﻿.venv/
+venv/
+__pycache__/
+*.pyc
+data/
+outputs/*
+!outputs/ansujkmeher_prediction.json
