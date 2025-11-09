@@ -22,7 +22,7 @@ The model achieves **~97% accuracy** and **0.9949 ROC-AUC**, demonstrating stron
 
 ## 📁 Folder Structure
 
-```
+
 
 📁 deepfake-ml/
   ├─ models/
